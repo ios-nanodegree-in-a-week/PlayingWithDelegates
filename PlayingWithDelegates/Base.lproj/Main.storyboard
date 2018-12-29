@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,81 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayingWithDelegates" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="EJ5-Ja-Yh4">
+                                <rect key="frame" x="62.5" y="258.5" width="250" height="150"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="hvX-af-c6w" userLabel="LabelStack">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="150"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter ZipCode" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="sHD-7r-Q88" userLabel="ZipCode">
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="postal-code"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$0.00" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="PAU-Gt-8PU" userLabel="Money">
+                                                <rect key="frame" x="0.0" y="50" width="250" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                                            </textField>
+                                            <textField userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Flip the switch to enable typing" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Slj-Jj-wYE" userLabel="FlipSwitchEnabledTextBox">
+                                                <rect key="frame" x="0.0" y="100" width="250" height="50"/>
+                                                <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" textContentType="name"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="hvX-af-c6w" firstAttribute="leading" secondItem="EJ5-Ja-Yh4" secondAttribute="leading" id="59x-D3-A3S"/>
+                                    <constraint firstAttribute="height" constant="150" id="QK9-yG-vZa"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="150" id="XdL-Fg-WQj"/>
+                                    <constraint firstAttribute="width" constant="250" id="fc4-GH-6bn"/>
+                                    <constraint firstItem="hvX-af-c6w" firstAttribute="top" secondItem="EJ5-Ja-Yh4" secondAttribute="top" id="mDp-n8-7b3"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="n9v-rg-b2x"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="bottom" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="aun-jM-9Jx" userLabel="SwitchStack">
+                                <rect key="frame" x="263.5" y="418.5" width="49" height="31"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="bottom" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="x7A-Wv-9mr" userLabel="TextBoxEnableSwitch">
+                                        <rect key="frame" x="0.0" y="0.0" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="toggleSwitchAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="5VU-6c-5vv"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aun-jM-9Jx" firstAttribute="top" secondItem="EJ5-Ja-Yh4" secondAttribute="bottom" constant="10" id="Btf-XS-vzU"/>
+                            <constraint firstItem="EJ5-Ja-Yh4" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bGg-jw-tJM"/>
+                            <constraint firstItem="aun-jM-9Jx" firstAttribute="trailing" secondItem="EJ5-Ja-Yh4" secondAttribute="trailing" id="qLT-Ly-cQk"/>
+                            <constraint firstItem="EJ5-Ja-Yh4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="suD-UC-0YK"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="moneyTextField" destination="PAU-Gt-8PU" id="e77-ig-yte"/>
+                        <outlet property="toggleSwitch" destination="x7A-Wv-9mr" id="X5Q-Uw-hEK"/>
+                        <outlet property="toggleTextField" destination="Slj-Jj-wYE" id="kia-If-Dvp"/>
+                        <outlet property="zipCodeTextField" destination="sHD-7r-Q88" id="eNZ-4J-6My"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>
